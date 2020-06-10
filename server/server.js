@@ -1,5 +1,7 @@
 const express = require('express');
 
+require('./src/database');
+
 const PORT = 8080;
 
 const app = express();
