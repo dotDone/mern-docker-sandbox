@@ -1,11 +1,11 @@
 # Dockerfile for client
 
-FROM node:10
+FROM node:14
 
 # Working directory for the app
 WORKDIR /usr/app
 
-COPY package*.json ./
+COPY package.json ./
 
 # Install dependencies
 RUN yarn install
