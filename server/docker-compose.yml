@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  webapp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: myapp-server-img
+    container_name: myapp_node_express
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mongo
+    env_file: .env
+    environment:
+      - MONGO_HOSTNAME=$MONGO_HOSTNAME
+      - MONGO_PORT=$MONGO_PORT
+      - MONGO_DB=$MONGO_DB
+  mongo:
+    image: mongo
+    container_name: myapp_mongodb
+    ports:
+      - '27017:27017'

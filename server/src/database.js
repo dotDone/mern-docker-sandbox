@@ -5,7 +5,13 @@ dotenv.config();
 
 // mongoose options
 const options = {
-  useNewUrlPArser: true,
+  useNewUrlParser: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  autoIndex: false,
+  poolSize: 10,
+  bufferMaxEntries: 0,
 };
 
 // MongoDB environment variables
