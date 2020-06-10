@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   webapp-server:
@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     image: myapp-server-img
     container_name: myapp_node_express
+    command: npm run dev
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules

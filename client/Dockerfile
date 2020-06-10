@@ -2,6 +2,8 @@
 
 FROM node:14
 
+ENV CI=true
+
 # Working directory for the app
 WORKDIR /usr/app
 
