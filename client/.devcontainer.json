@@ -1,0 +1,25 @@
+{
+  "name": "myapp-client",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "client",
+  "shutdownAction": "none",
+  "workspaceFolder": "/usr/app",
+  "forwardPorts": [3000],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "xabikos.javascriptsnippets",
+    "dsznajder.es7-react-js-snippets",
+    "dzannotti.vscode-babel-coloring"
+  ],
+  "settings": {
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+      // For ESLint
+      "source.fixAll.eslint": true,
+      // For TSLint
+      "source.fixAll.tslint": true,
+      // For Stylelint
+      "source.fixAll.stylelint": true
+    }
+  }
+}

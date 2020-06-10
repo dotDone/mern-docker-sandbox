@@ -1,0 +1,9 @@
+{
+  "name": "myapp-server",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "server",
+  "shutdownAction": "none",
+  "workspaceFolder": "/usr/src/app",
+  "extensions": ["mongodb.mongodb-vscode", "roerohan.mongo-snippets-for-node-js"],
+  "settings": {}
+}
