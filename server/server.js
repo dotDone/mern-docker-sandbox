@@ -7,6 +7,10 @@ const PORT = 8080;
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
